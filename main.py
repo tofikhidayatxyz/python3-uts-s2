@@ -57,6 +57,8 @@ class Lamborgini(Car):
 
     def setSpeed(self, speed):
         self._speed = speed * self._gear
+    def setGear(self, gear):
+        self._gear = "Mundur" if gear < 0 else gear
 
 
 
@@ -76,6 +78,7 @@ lambo.setGear(3)
 lambo.setSpeed(300)
 lambo.turnOnLamp()
 lambo.detail()
+lambo.setGear(-1)
 lambo.turnOffLamp()
 lambo.detail()
 
